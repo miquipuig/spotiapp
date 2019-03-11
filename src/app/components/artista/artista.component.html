@@ -39,7 +39,11 @@
                     <td><img [src]="topTrack.album.images | noimage " class="img-thumb "></td>
                     <td>{{ topTrack.album.name }}</td>
                     <td>{{ topTrack.name }}</td>
-                    <td><audio [src]="topTrack.preview_url" controls></audio> </td>
+                    <td>
+                        <!-- <audio [src]="topTrack.preview_url" controls></audio>  -->
+                        <!-- <iframe [src]="'1DFixLWuPkv3KT3TnV35m3' | domseguro:  'https://open.spotify.com/embed/album/'" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> -->
+                        <iframe [src]="topTrack.uri | domseguro:  'https://open.spotify.com/embed?uri='" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
                 </tr>
 
 
